@@ -26,11 +26,17 @@
     "generate:prerender": "cd dist && node prerender",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
     "serve:prerender": "cd dist/browser && http-server",
-    "serve:ssr": "node dist/server"
+    "serve:ssr": "node dist/server",
+    "postinstall": "node patch.js"
+
   },
   "pre-commit": [],
   "private": true,
   "dependencies": {
+    "@0x/order-utils": "^2.0.0",
+    "@0x/subproviders": "^2.1.0",
+    "@0x/utils": "^2.0.3",
+
     "@angular/animations": "^6.0.0",
     "@angular/common": "^6.0.0",
     "@angular/compiler": "^6.0.0",
